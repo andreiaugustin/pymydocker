@@ -1,5 +1,5 @@
 {
-    "name": "pymydocker",
+    "name": "pymydock",
     "description": "A simple module to control docker through the OW3 Python Worker",
     "version": "0.1.0",
     "compatibility": "12.*",
