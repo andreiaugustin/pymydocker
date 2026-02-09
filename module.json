@@ -9,7 +9,7 @@
     ],
     "pyworker": [
         "pyworker/pymydock"
-    ]
+    ],
     "xcomps": [],
     "dependencies": []
 }
