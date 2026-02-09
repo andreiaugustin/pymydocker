@@ -5,7 +5,7 @@
     "compatibility": "12.*",
     "platform": "all",
     "libraries": [
-        "pymydocker"
+        "pymydock"
     ],
     "pyworker": [
         "pyworker/pymydock"
