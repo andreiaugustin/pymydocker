@@ -1,0 +1,2 @@
+
+Quit method $cinst.$callmethod(cModule,'remove_image',row(image),kFalse)

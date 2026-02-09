@@ -1,0 +1,2 @@
+
+Quit method $cinst.$callmethod(cModule,'push_image',row(repository,tag),kFalse)

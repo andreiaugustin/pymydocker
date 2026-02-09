@@ -1,0 +1,36 @@
+{
+	"classtype": "kObjectclass",
+	"omnisversion": "12.0",
+	"superclass": ".OW3.OW3 Worker Objects\\PYTHONWorker",
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+		{
+			"name": "cModule",
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'pymydock'"
+		}
+	],
+	"ivardefs": [
+
+	],
+	"properties": {
+		"canremotedebugwhenlocked": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componentinfo": {
+
+		},
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2026-02-09 18:45:35",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"selfcontained": false,
+		"userinfo": "",
+		"version": ""
+	}
+}

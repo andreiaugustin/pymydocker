@@ -1,0 +1,269 @@
+[
+	{
+		"name": "$construct",
+		"pvardefs": [
+			{
+				"name": "pPythonExecutable",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$isRunning",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getDataUsage",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$listContainers",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$listImages",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$listVolumes",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$listNetworks",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$listSecrets",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$buildImage",
+		"pvardefs": [
+			{
+				"name": "path",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "Path to the directory containing the Dockerfile"
+			},
+			{
+				"name": "tag",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'latest'",
+				"desc": "A tag to add to the final image"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getImage",
+		"pvardefs": [
+			{
+				"name": "name",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "The name of the image"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$pruneImages",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$pullImage",
+		"desc": "Pull an image of the given name. Similar to the docker pull command. ",
+		"pvardefs": [
+			{
+				"name": "repository",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "The repository to pull"
+			},
+			{
+				"name": "tag",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'latest'",
+				"desc": "The tag to pull"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$pushImage",
+		"desc": "Push an image or a repository to the registry. Similar to the docker push command.",
+		"pvardefs": [
+			{
+				"name": "repository",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "The repository to push to"
+			},
+			{
+				"name": "tag",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'latest'",
+				"desc": "An optional tag to push"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$searchImages",
+		"desc": "Search for images on Docker Hub. Similar to the docker search command.",
+		"pvardefs": [
+			{
+				"name": "term",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "A term to search for"
+			},
+			{
+				"name": "limit",
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"initval": "25",
+				"desc": "The maximum number of results to return"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$removeImage",
+		"desc": "Remove an image. Similar to the docker rmi command.",
+		"pvardefs": [
+			{
+				"name": "image",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "The image to remove"
+			},
+			{
+				"name": "force",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"initval": "kFalse",
+				"desc": "Force removal of the image"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$runContainer",
+		"pvardefs": [
+			{
+				"name": "image",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"desc": "The image to run"
+			},
+			{
+				"name": "command",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'None'",
+				"desc": "The command to run in the container"
+			},
+			{
+				"name": "auto_remove",
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"initval": "kFalse",
+				"desc": "Enable auto-removal of the container on daemon side when the container’s process exits"
+			},
+			{
+				"name": "name",
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'None'",
+				"desc": "The name for this container, leave to 'None' for randomly assigned name"
+			},
+			{
+				"name": "ports",
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"initval": "row('2222/tcp','3333')",
+				"desc": "Ports to bind inside the container"
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

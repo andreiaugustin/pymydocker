@@ -1,0 +1,2 @@
+
+Quit method $cinst.$callmethod(cModule,'prune_images',row(),kFalse)

@@ -1,0 +1,2 @@
+
+Quit method $cinst.$callmethod(cModule,'is_running',row(),kFalse)
